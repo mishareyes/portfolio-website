@@ -21,10 +21,15 @@ nav {
     display: flex;
     justify-content: space-between; 
     color: black;
-    transition: 0.5s;
+    transition: all 0.5s ease;
 }
 .nav:hover { color: #FFEFD8; }
-.nav:active { text-decoration: underline; color: white; }
+.nav:active { 
+    text-decoration: underline; 
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
+    color: white; 
+}
 
 .logo {
     font-size: 40px;
@@ -33,10 +38,14 @@ nav {
     color: black;
     font-family: Maragsa;
     letter-spacing: 0.05em;
-    transition: 0.5s;
+    transition: all 0.5s ease;
 }
 .logo:hover { color: #FFEFD8; }
-.logo:active { text-decoration: underline; color: white; }
+.logo:active { 
+    text-decoration: underline; 
+    text-decoration-style: dotted;
+    text-decoration-thickness: 3px;
+    color: white; }
 
 .sticky { position: fixed; top: 0; width: 100%; } 
 .sticky + .content { padding-top: 100px; }
@@ -82,6 +91,22 @@ ul.show { display: block; }
     margin: 10px 100px;
 }
 
+.greeting {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.greeting-text {
+    line-height: 0;
+    transition: all 0.5s ease;
+}
+
+.greeting-text:hover {
+    color: hsl(243, 100%, 84%, 80%);
+    transform: translateY(-20px);
+}
+
 /* 
  * ABOUT SECTION 
  */
@@ -99,7 +124,7 @@ ul.show { display: block; }
 /* 
  * REUSABLE 
  */
- .button {
+.button {
     width: 220px;
     height: 50px;
     background-color: #F6BD88;
@@ -111,7 +136,7 @@ ul.show { display: block; }
     border: 2px solid black;
     color: black;
     font-size: 20px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
@@ -158,11 +183,11 @@ ul.show { display: block; }
     border-radius: 20px;
     border: 2px solid black;
     margin: 15px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 .card:hover { 
     box-shadow: 0 0 20px 0 #8a8a8a; 
-    transform: scale(1.05) rotate(1deg) translate(0px, 0px) skew(0deg, 0deg)
+    transform: scale(1.05) rotate(1deg) translate(0px, 0px) skew(0deg, 0deg);
 }
 .card-img {
     width: 100%;
@@ -294,8 +319,8 @@ a { text-decoration: none; color: black; transition: 0.3s; }
 /* 
  * IMAGES 
  */
-svg { transition: 0.3s; }
-svg:hover { fill: white; }
+svg { transition: all 0.5s ease; }
+svg:hover { fill: white; transform: scale(1.2); }
 svg:active { fill: #84B1EE; }
 
 .socials { display: flex; flex-direction: row; }
