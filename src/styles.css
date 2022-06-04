@@ -23,12 +23,12 @@ nav {
     color: black;
     transition: all 0.5s ease;
 }
-.nav:hover { color: #FFEFD8; }
+.nav:hover { color: white; }
 .nav:active { 
     text-decoration: underline; 
     text-decoration-style: dotted;
     text-decoration-thickness: 3px;
-    color: white; 
+    color: #FFEFD8; 
 }
 
 .logo {
@@ -40,12 +40,12 @@ nav {
     letter-spacing: 0.05em;
     transition: all 0.5s ease;
 }
-.logo:hover { color: #FFEFD8; }
+.logo:hover { color: white; }
 .logo:active { 
     text-decoration: underline; 
     text-decoration-style: dotted;
     text-decoration-thickness: 3px;
-    color: white; }
+    color: #FFEFD8; }
 
 .sticky { position: fixed; top: 0; width: 100%; } 
 .sticky + .content { padding-top: 100px; }
@@ -100,12 +100,18 @@ ul.show { display: block; }
 .greeting-text {
     line-height: 0;
     transition: all 0.5s ease;
+    transition-delay: 20ms;
 }
 
 .greeting-text:hover {
     color: hsl(243, 100%, 84%, 80%);
     transform: translateY(-20px);
 }
+
+.teal:hover { color: #71dad5; }
+.peach:hover { color: #f6bd88; }
+.purple:hover { color: #b1adff; }
+.blue:hover { color: #86b1ee; }
 
 /* 
  * ABOUT SECTION 
@@ -245,21 +251,30 @@ ul.show { display: block; }
     background-color: #FFEFD8;
     background-image: url("layout/contact.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     color: black;
     display: flex;
     justify-content: space-around;
-    height: 500px;
     border: 2px solid #000000;
     border-top: 0px;
 }
 
 .contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 0px 80px;
+    width: 100%;
+    /* padding: 0px 80px; */
+}
+
+.column { flex: 50%; }
+.get-in-touch {
+    align-items: center;
+}
+
+.contact-form {
+    margin-left: 50px;
+    margin-right: 0px;
+    align-items: center;
 }
 
 form { margin-top: 20px; }
@@ -323,7 +338,7 @@ svg { transition: all 0.5s ease; }
 svg:hover { fill: white; transform: scale(1.2); }
 svg:active { fill: #84B1EE; }
 
-.socials { display: flex; flex-direction: row; }
+.socials { display: flex; justify-content: center; }
 .social { margin: 10px; }
 
 /* 
