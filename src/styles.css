@@ -181,7 +181,7 @@ ul.show { display: block; }
 }
 
 .card {
-    height: 500px;
+    /* height: 500px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,7 +209,7 @@ ul.show { display: block; }
     height: 40px;
     background-color: #ABCFFF;
     box-shadow: none;
-    margin-top: 15px;
+    margin: 8px 0px 20px 0px;
     font-size: 18px;
 }
 
@@ -229,7 +229,7 @@ ul.show { display: block; }
     height: 40px;
     background-color: #CFCDFF;
     box-shadow: none;
-    margin-top: 15px;
+    margin: 8px 0px 20px 0px;
     font-size: 18px;
 }
 
@@ -249,7 +249,7 @@ ul.show { display: block; }
  */
 #contact {
     background-color: #FFEFD8;
-    background-image: url("layout/contact.png");
+    background-image: url("layout/contact_temp.png");
     background-repeat: no-repeat;
     background-position: top center;
     color: black;
@@ -257,27 +257,27 @@ ul.show { display: block; }
     justify-content: space-around;
     border: 2px solid #000000;
     border-top: 0px;
+    height: 150px;
 }
 
 .contact-container {
     display: flex;
     text-align: center;
-    width: 100%;
     /* padding: 0px 80px; */
 }
 
-.column { flex: 50%; }
+/* .column { flex: 50%; } */
 .get-in-touch {
     align-items: center;
 }
 
-.contact-form {
+/* .contact-form {
     margin-left: 50px;
     margin-right: 0px;
     align-items: center;
-}
+} */
 
-form { margin-top: 20px; }
+/* form { margin-top: 20px; }  */
 
 /* 
  * FOOTER
@@ -315,8 +315,8 @@ h2 {
 
 h3 {
     font-size: 32px;
-    margin-top: 25px;
-    margin-bottom: 2px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     font-family: Maragsa;
     letter-spacing: 0.05em;
 
