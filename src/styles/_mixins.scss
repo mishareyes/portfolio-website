@@ -1,0 +1,68 @@
+@mixin bgImage() {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin italicize() {
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-7deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-7deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-7deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-7deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-7deg, 0deg);
+}
+
+@mixin center($flexDirection) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: center;
+    align-items: center;
+}
+
+// MEDIA QUERIES MANAGER
+/* 
+0 - 600px:     Phone
+600px - 900px: Tablet Portrait
+900px - 1200px: Tablet Landscape
+600px - 900px: Tablet Portrait
+[1200px - 1800px] is where our normal styles apply
+1800px ++ : Big desktop 
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components 
+
+1em = 16px
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) {
+        // 600px
+        @content;
+      }
+    }
+    @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.26em) {
+        // 900px
+        @content;
+      }
+    }
+    @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) {
+        // 1200px
+        @content;
+      }
+    }
+    @if $breakpoint == big-desktop {
+      // 1800px
+      @media only screen and (min-width: 112.5em) {
+        @content;
+      }
+    }
+  }
