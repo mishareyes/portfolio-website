@@ -299,6 +299,11 @@ nav {
   height: 100vh;
   font-size: 25px;
 }
+@media only screen and (max-width: 37.5em) {
+  #home {
+    background-size: 180%;
+  }
+}
 
 .home_text {
   text-align: center;
@@ -372,6 +377,11 @@ nav {
   background-image: url("../layout/projects.png"), linear-gradient(270deg, #86b1ee 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
 }
+@media only screen and (max-width: 37.5em) {
+  #projects {
+    background-size: 170%;
+  }
+}
 
 #designs {
   background-attachment: fixed;
@@ -379,6 +389,11 @@ nav {
   background-position: center;
   background-image: url("../layout/designs.png"), linear-gradient(90deg, #b1adff 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
+}
+@media only screen and (max-width: 37.5em) {
+  #designs {
+    background-size: 120%;
+  }
 }
 
 .grid-container {
@@ -462,6 +477,11 @@ nav {
   display: flex;
   justify-content: space-around;
   /* height: 150px; */
+}
+@media only screen and (max-width: 75em) {
+  #contact {
+    background-position: bottom;
+  }
 }
 
 .contact-container {
