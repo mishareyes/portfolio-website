@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./mixins";
+@import "./project";
 
 @font-face {
   font-family: Maragsa;
@@ -31,6 +32,10 @@ h1 {
   font-size: 80px;
   margin: 0px;
   letter-spacing: 0.1em;
+
+  @include respond(phone) {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -70,6 +75,55 @@ a {
 .subtext {
   font-size: 16px;
   padding: 8px;
+}
+
+/* 
+ * REUSABLE 
+ */
+.button {
+  @include center(none);
+  width: 220px;
+  height: 50px;
+  background-color: $peach;
+  border-radius: 60px;
+  margin-top: 28px;
+  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $peachDark;
+    box-shadow: 0 4px 8px 0 $peach, 0 6px 20px 0 $peach;
+  }
+
+  &:active {
+    background-color: $greyBack;
+    color: $greyText;
+    box-shadow: none;
+  }
+}
+
+svg {
+  transition: all 0.5s ease;
+
+  &:hover {
+    fill: #ecb86f;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    fill: #84b1ee;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+
+  div {
+    margin: 10px;
+  }
 }
 
 /* 
@@ -131,6 +185,7 @@ nav {
   top: 0;
   width: 100%;
 }
+
 .sticky + .content {
   padding-top: 100px;
 }
@@ -144,9 +199,7 @@ nav {
   background-color: $background;
   background-image: url("../layout/home.png");
   height: 100vh;
-  color: black;
   font-size: 25px;
-  border: 2px solid #000000;
 }
 
 .home_text {
@@ -170,20 +223,10 @@ nav {
   }
 }
 
-// .home_greeting-text {
-//   line-height: 0;
-//   transition: all 0.5s ease;
-//   transition-delay: 20ms;
-
-//   &:hover {
-//     transform: translateY(-20px);
-//   }
-// }
-
-.home_hover--teal:hover { color: $turquoise; }
-.home_hover--peach:hover { color: $peach; }
-.home_hover--purple:hover { color: $purple; }
-.home_hover--blue:hover { color: $blue; }
+.hover--teal:hover { color: $turquoise; }
+.hover--peach:hover { color: $peach; }
+.hover--purple:hover { color: $purple; }
+.hover--blue:hover { color: $blue; }
 
 /* 
   * ABOUT SECTION 
@@ -214,55 +257,6 @@ nav {
       margin-top: 40px;
       width: 80%;
     }
-  }
-}
-
-/* 
-  * REUSABLE 
-  */
-.button {
-  @include center(none);
-  width: 220px;
-  height: 50px;
-  background-color: $peach;
-  border-radius: 60px;
-  margin-top: 28px;
-  border: 2px solid black;
-  color: black;
-  font-size: 20px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: $peachDark;
-    box-shadow: 0 4px 8px 0 $peach, 0 6px 20px 0 $peach;
-  }
-
-  &:active {
-    background-color: $greyBack;
-    color: $greyText;
-    box-shadow: none;
-  }
-}
-
-svg {
-  transition: all 0.5s ease;
-
-  &:hover {
-    fill: #ecb86f;
-    transform: scale(1.2);
-  }
-
-  &:active {
-    fill: #84b1ee;
-  }
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-
-  div {
-    margin: 10px;
   }
 }
 
@@ -319,14 +313,14 @@ svg {
 .project-button {
   width: 120px;
   height: 40px;
-  background-color: #abcfff;
+  background-color: $blueLight;
   box-shadow: none;
   margin: 8px 0px 20px 0px;
   font-size: 18px;
 
   &:hover {
-    background-color: #6cacff;
-    box-shadow: 0 4px 8px 0 #abcfff, 0 6px 20px 0 #abcfff;
+    background-color: $blueDark;
+    box-shadow: 0 4px 8px 0 $blueLight, 0 6px 20px 0 $blueLight;
   }
 
   &:active {
@@ -366,8 +360,6 @@ svg {
   color: black;
   display: flex;
   justify-content: space-around;
-  border: 2px solid #000000;
-  border-top: 0px;
   /* height: 150px; */
 }
 
@@ -473,9 +465,5 @@ ul.show {
     margin: 0px;
     margin-bottom: 10px;
     width: 100%;
-  }
-
-  h1 {
-    font-size: 60px;
   }
 }

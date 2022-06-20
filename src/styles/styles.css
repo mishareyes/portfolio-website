@@ -17,6 +17,94 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 
 */
+._project h1 {
+  font-size: 70px;
+}
+._project p {
+  font-size: 18px;
+}
+._project b {
+  font-family: "Inter";
+  font-size: 18px;
+  letter-spacing: normal;
+  font-weight: 700;
+}
+._project i:hover {
+  color: #86b1ee;
+}
+._project i:active {
+  color: #c4c4c4;
+}
+._project svg:hover {
+  fill: white;
+}
+._project svg:active {
+  fill: #c4c4c4;
+}
+._project ._project_title {
+  background-image: url("../layout/project_title.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 10px;
+}
+._project ._project_featured--brewlab {
+  margin: 0px;
+}
+._project ._project_featured--brewlab .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 4px;
+}
+._project ._project_featured--brewlab .row img {
+  flex: 30%;
+  max-width: 30%;
+  padding: 4px;
+}
+._project ._project_others {
+  margin: 0px;
+  margin-bottom: 20px;
+  /* Create four equal columns that sits next to each other */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+}
+._project ._project_others .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+._project ._project_others .column {
+  flex: 22%;
+  max-width: 22%;
+  padding: 0 4px;
+}
+._project ._project_others .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  ._project ._project_others .column {
+    flex: 48%;
+    max-width: 48%;
+  }
+}
+@media screen and (max-width: 600px) {
+  ._project ._project_others .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 @font-face {
   font-family: Maragsa;
   src: url("fonts/Maragsa.otf");
@@ -46,6 +134,11 @@ h1 {
   font-size: 80px;
   margin: 0px;
   letter-spacing: 0.1em;
+}
+@media only screen and (max-width: 37.5em) {
+  h1 {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -85,6 +178,53 @@ a {
 .subtext {
   font-size: 16px;
   padding: 8px;
+}
+
+/* 
+ * REUSABLE 
+ */
+.button {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 50px;
+  background-color: #f6bd88;
+  border-radius: 60px;
+  margin-top: 28px;
+  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: #ef9037;
+  box-shadow: 0 4px 8px 0 #f6bd88, 0 6px 20px 0 #f6bd88;
+}
+.button:active {
+  background-color: #c4c4c4;
+  color: #808080;
+  box-shadow: none;
+}
+
+svg {
+  transition: all 0.5s ease;
+}
+svg:hover {
+  fill: #ecb86f;
+  transform: scale(1.2);
+}
+svg:active {
+  fill: #84b1ee;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+.socials div {
+  margin: 10px;
 }
 
 /* 
@@ -157,9 +297,7 @@ nav {
   background-color: #FFEFD8;
   background-image: url("../layout/home.png");
   height: 100vh;
-  color: black;
   font-size: 25px;
-  border: 2px solid #000000;
 }
 
 .home_text {
@@ -181,19 +319,19 @@ nav {
   transform: translateY(-20px);
 }
 
-.home_hover--teal:hover {
+.hover--teal:hover {
   color: #71dad5;
 }
 
-.home_hover--peach:hover {
+.hover--peach:hover {
   color: #f6bd88;
 }
 
-.home_hover--purple:hover {
+.hover--purple:hover {
   color: #b1adff;
 }
 
-.home_hover--blue:hover {
+.hover--blue:hover {
   color: #86b1ee;
 }
 
@@ -222,53 +360,6 @@ nav {
     margin-top: 40px;
     width: 80%;
   }
-}
-
-/* 
-  * REUSABLE 
-  */
-.button {
-  display: flex;
-  flex-direction: none;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 50px;
-  background-color: #f6bd88;
-  border-radius: 60px;
-  margin-top: 28px;
-  border: 2px solid black;
-  color: black;
-  font-size: 20px;
-  transition: all 0.3s ease;
-}
-.button:hover {
-  background-color: #ffa755;
-  box-shadow: 0 4px 8px 0 #f6bd88, 0 6px 20px 0 #f6bd88;
-}
-.button:active {
-  background-color: #c4c4c4;
-  color: #808080;
-  box-shadow: none;
-}
-
-svg {
-  transition: all 0.5s ease;
-}
-svg:hover {
-  fill: #ecb86f;
-  transform: scale(1.2);
-}
-svg:active {
-  fill: #84b1ee;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-}
-.socials div {
-  margin: 10px;
 }
 
 /* 
@@ -370,8 +461,6 @@ svg:active {
   color: black;
   display: flex;
   justify-content: space-around;
-  border: 2px solid #000000;
-  border-top: 0px;
   /* height: 150px; */
 }
 
@@ -465,9 +554,5 @@ ul.show {
     margin: 0px;
     margin-bottom: 10px;
     width: 100%;
-  }
-
-  h1 {
-    font-size: 60px;
   }
 }/*# sourceMappingURL=styles.css.map */
