@@ -3,8 +3,8 @@
 @import "./project";
 
 @font-face {
-  font-family: Maragsa;
-  src: url("fonts/Maragsa.otf");
+  font-family: "Maragsa";
+  src: url("../fonts/Maragsa.otf");
 }
 
 html {
@@ -55,15 +55,21 @@ h3 {
   letter-spacing: 0.05em;
 }
 
+h4 {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 17px;
+  margin: 0px;
+}
+
 b {
   font-family: Maragsa;
   letter-spacing: 0.3mm;
   font-size: 22px;
-}
-
-p {
-  font-size: 20px;
-  margin: 0px;
 }
 
 a {
@@ -73,7 +79,7 @@ a {
 }
 
 .subtext {
-  font-size: 16px;
+  font-size: 15px;
   padding: 8px;
 }
 
@@ -253,7 +259,7 @@ nav {
     width: 40%;
   }
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     display: flex;
     flex-direction: column;
 
@@ -314,7 +320,7 @@ nav {
   
   img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     border: 2px solid black;
     border-top: 0px;
     border-radius: 20px 20px 0px 0px;
