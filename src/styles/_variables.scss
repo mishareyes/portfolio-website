@@ -6,15 +6,29 @@ $purple: #b1adff;
 $peach: #f6bd88;
 $blue: #86b1ee;
 $turquoise: #71dad5;
+$gradient: linear-gradient(
+    to right,
+    $peach 0%,
+    $purple 43.23%,
+    $blue 68.75%,
+    $turquoise 100%
+);
 
 // with alpha
 $purpleA: hsla(243deg, 100%, 84%, 0.8);
 $peachA: hsla(29deg, 86%, 75%, 0.8);
 $blueA: hsla(215deg, 76%, 73%, 0.8);
 $turquoiseA: hsla(177deg, 59%, 65%, 0.8);
+$gradientA: linear-gradient(
+    90deg,
+    $peachA 0%,
+    $purpleA 43.23%,
+    $blueA 68.75%,
+    $turquoiseA 100%
+);
 
 // darker
-$peachDark: #ef9037;
+$peachDark: #ff9f45;
 $blueDark: #6cacff;
 
 // lighter

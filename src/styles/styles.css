@@ -205,7 +205,7 @@ a {
   transition: all 0.3s ease;
 }
 .button:hover {
-  background-color: #ef9037;
+  background-color: #ff9f45;
   box-shadow: 0 4px 8px 0 #f6bd88, 0 6px 20px 0 #f6bd88;
 }
 .button:active {
@@ -218,11 +218,11 @@ svg {
   transition: all 0.5s ease;
 }
 svg:hover {
-  fill: #ecb86f;
+  fill: white;
   transform: scale(1.2);
 }
 svg:active {
-  fill: #84b1ee;
+  fill: #6cacff;
 }
 
 .socials {
@@ -265,16 +265,16 @@ nav {
   color: black;
   font-family: Maragsa;
   letter-spacing: 0.05em;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .nav_logo:hover {
   color: white;
+  text-shadow: 0px 3px 10px white;
+  text-decoration: none;
 }
 .nav_logo:active {
-  text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-  text-decoration-thickness: 3px;
+  text-shadow: none;
+  text-shadow: 0px -3px 10px #FFEFD8;
   color: #FFEFD8;
 }
 
@@ -295,13 +295,14 @@ nav {
 #home {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #FFEFD8;
   background-image: url("../layout/home.png");
+  background-size: cover;
   height: 100vh;
   font-size: 25px;
 }
@@ -360,7 +361,11 @@ nav {
   align-items: center;
 }
 .about-container img {
-  width: 40%;
+  width: 32%;
+  transition: all 0.3s ease;
+}
+.about-container img:hover {
+  transform: scale(1.05) rotate(1deg) translate(0px, 0px) skew(0deg, 0deg);
 }
 @media only screen and (max-width: 56.26em) {
   .about-container {
@@ -379,7 +384,7 @@ nav {
 #projects {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-image: url("../layout/projects.png"), linear-gradient(270deg, #86b1ee 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
 }
@@ -392,7 +397,7 @@ nav {
 #designs {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-image: url("../layout/designs.png"), linear-gradient(90deg, #b1adff 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
 }
@@ -421,7 +426,7 @@ nav {
   transition: all 0.3s ease;
 }
 .card:hover {
-  box-shadow: 0 0 20px 0 #8a8a8a;
+  box-shadow: 0 0 20px 0 hsla(0deg, 0%, 54%, 0.6);
   transform: scale(1.05) rotate(1deg) translate(0px, 0px) skew(0deg, 0deg);
 }
 .card img {
@@ -476,7 +481,7 @@ nav {
 #contact {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-color: #FFEFD8;
   background-image: url("../layout/contact_temp.png");
   color: black;
@@ -515,16 +520,30 @@ footer {
   flex-direction: none;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to right, #f6bd88 0%, #b1adff 43.23%, #86b1ee 68.75%, #71dad5 100%);
   text-align: center;
-  background-image: linear-gradient(270deg, #f6bd88 0%, #b1adff 43.23%, #86b1ee 68.75%, #71dad5 100%);
   border: 2px solid #000000;
   border-top: 0px;
   height: 50px;
+}
+footer button {
+  border: none;
+  height: 100%;
+  width: 100%;
+  background-size: 300% 100%;
+  transition: all 0.5s ease-in-out;
+  background-image: linear-gradient(to right, #f6bd88 0%, #b1adff 43.23%, #86b1ee 68.75%, #71dad5 100%);
+}
+footer button:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  background-image: linear-gradient(to right, #f6bd88 0%, #b1adff 43.23%, #86b1ee 68.75%, #71dad5 100%);
 }
 footer p {
   padding-top: 15px;
   font-size: 18px;
   margin: 0px 20px;
+  font-family: Inter;
 }
 
 /* 
