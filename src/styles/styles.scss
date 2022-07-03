@@ -203,10 +203,6 @@ nav {
   background-size: cover;
   height: 100vh;
   font-size: 25px;
-
-  @include respond(phone) {
-    background-size: 180%;
-  }
 }
 
 .home_text {
@@ -434,6 +430,7 @@ footer {
     font-size: 18px;
     margin: 0px 20px;
     font-family: Inter;
+    color: black;
   }
 }
 

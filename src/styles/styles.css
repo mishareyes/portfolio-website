@@ -20,6 +20,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 ._project h1 {
   font-size: 70px;
 }
+@media only screen and (max-width: 37.5em) {
+  ._project h1 {
+    font-size: 50px;
+  }
+}
 ._project p {
   font-size: 18px;
 }
@@ -295,7 +300,7 @@ nav {
 #home {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,11 +310,6 @@ nav {
   background-size: cover;
   height: 100vh;
   font-size: 25px;
-}
-@media only screen and (max-width: 37.5em) {
-  #home {
-    background-size: 180%;
-  }
 }
 
 .home_text {
@@ -384,7 +384,7 @@ nav {
 #projects {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-image: url("../layout/projects.png"), linear-gradient(270deg, #86b1ee 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
 }
@@ -397,7 +397,7 @@ nav {
 #designs {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-image: url("../layout/designs.png"), linear-gradient(90deg, #b1adff 0%, rgba(255, 255, 255, 0) 80%);
   text-align: center;
 }
@@ -481,7 +481,7 @@ nav {
 #contact {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
   background-color: #FFEFD8;
   background-image: url("../layout/contact_temp.png");
   color: black;
@@ -544,6 +544,7 @@ footer p {
   font-size: 18px;
   margin: 0px 20px;
   font-family: Inter;
+  color: black;
 }
 
 /* 

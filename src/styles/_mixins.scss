@@ -1,7 +1,7 @@
 @mixin bgImage() {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
 }
 
 @mixin italicize() {
