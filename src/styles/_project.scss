@@ -25,7 +25,7 @@
 
     svg {
         &:hover { fill: white; }
-        &:active { fill: $greyBack; }
+        &:active { fill: $purple; }
     }
 
     ._project_title {
@@ -53,6 +53,30 @@
             padding: 4px;
         }
     }
+
+    ._project_featured--consensus {
+      margin: 0px;
+
+      img {
+        max-width: 100%;
+      }
+
+      .feature--default {
+        display: block;
+
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      .feature--portrait {
+        display: none;
+
+        @include respond(phone) {
+          display: block;
+        }
+      }
+  }
 
     ._project_others {
         margin: 0px;

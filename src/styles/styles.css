@@ -44,7 +44,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   fill: white;
 }
 ._project svg:active {
-  fill: #c4c4c4;
+  fill: #b1adff;
 }
 ._project ._project_title {
   background-image: url("../layout/project_title.png");
@@ -70,6 +70,28 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex: 30%;
   max-width: 30%;
   padding: 4px;
+}
+._project ._project_featured--consensus {
+  margin: 0px;
+}
+._project ._project_featured--consensus img {
+  max-width: 100%;
+}
+._project ._project_featured--consensus .feature--default {
+  display: block;
+}
+@media only screen and (max-width: 37.5em) {
+  ._project ._project_featured--consensus .feature--default {
+    display: none;
+  }
+}
+._project ._project_featured--consensus .feature--portrait {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  ._project ._project_featured--consensus .feature--portrait {
+    display: block;
+  }
 }
 ._project ._project_others {
   margin: 0px;
