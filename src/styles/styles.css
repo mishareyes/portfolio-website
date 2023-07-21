@@ -543,12 +543,13 @@ nav {
 }
 
 .project-button {
-  width: 120px;
-  height: 40px;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
   background-color: #abcfff;
   box-shadow: none;
   margin: 8px 0px 20px 0px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .project-button:hover {
   background-color: #6cacff;
@@ -561,12 +562,13 @@ nav {
 }
 
 .design-button {
-  width: 120px;
-  height: 40px;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
   background-color: #cfcdff;
   box-shadow: none;
   margin: 8px 0px 20px 0px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .design-button:hover {
   background-color: #928fff;
